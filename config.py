@@ -1,0 +1,5 @@
+USERNAME = 'zpeng'
+PASSWORD = 'Passw0rd'
+ADDRESS = '127.0.0.1'
+PORT = '6443'
+SQLALCHEMY_DATABASE_URI = f'mysql://{USERNAME}:{PASSWORD}@{ADDRESS}:{PORT}/port-tracker'
