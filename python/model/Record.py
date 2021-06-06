@@ -1,4 +1,4 @@
-from python.model.base import db
+from python.model.model import db
 
 
 class Record(db.Model):
