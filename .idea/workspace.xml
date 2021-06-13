@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,31 +14,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ffa6952-e3b9-4a86-b669-8fbc0778e90a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/auth/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/auth/login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/auth/navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/endpoints.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/python/api/auth.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/python/model/model.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/python/test/test_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/porttracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/porttracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.9d5b29c0.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.9d5b29c0.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.8e910a0a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.8e910a0a.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/2.8e910a0a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/3.af8ceee0.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/3.af8ceee0.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.2943e2a4.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.2943e2a4.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.504c9c36.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.504c9c36.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/build/static/media/logo.6ce24c58.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/02695926325db1ffc6ffee6db6284b2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/033cb681d8765d4542f47f3980f8a028.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/03e37a9a654dfab28168983d7d715324.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/053283e6703d9763f809f862e7e187d4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/0eb05fdf528210f43c6c2f9cf584a761.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/17542105fc026139d72032d23ffff716.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/21ca937068bab8da5c5317ab4da3b170.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/2a1e74b96e47de215bc1e5d7f7f9be7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/2c928b95ad9a4cd63b1127b09ee67330.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/30c2a0bcef3f1b15aa38f1647e12467a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/38f2836fbbcff78f396ce4762415342d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/4a3e6897d9f5b077d355c5109bfec90f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/4cdafa790b27a958c11335c966519fac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/5403d056e029e97969ab39e1c11bb9b3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/566ae321815d70019d91fe06a2255316.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/59ee9a9a93644d18eb5c801f2854a641.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/5b127d0f8a794fbc0f074da5faaf62ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/6075396105dc16d6c03fef222807b6d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/755362daf0d1bb63fab0f87039ce828b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/8088d809dc7eb23e8fbb644a61ec2355.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a56defdc242d71f2c5ff956da6337d9d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a582e5ee63c322f5617d3bdb5918570a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a81395ddfe5c24c0d05c00247abb5643.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a889d3ba9d09a8b035d7a7a9fb054389.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/aafb1c36aaf6a93191b7a845c4cb4eea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/b4dd2a61967784fcda5038e489ac8cd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/b5af6b8219f733d8b1619d8a096e61cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/b7faf9f58b67c67b72d62d32695be770.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/ba1c068fc2713f4d59b89a8c865ffde2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/ba9fb42653db0e96faa30819eebfb70c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c3ae7e4e11f9b7c088b11f92a2a6d280.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/c51f09c328328ca367115dd8de47355b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/d372bb32f52ae5d4b0ba2805255974b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/da4679a9dfacc941f7ca006ce7851a29.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e39458a16ae846eed5e5f8f25c03076c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e70577ee880986ad218b2670cd690d16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/e76c49d89af8b9b529c7b4ee3c8f9739.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/eb6a9cc651df7a854a7634152edd6fe9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/ed6d6faf9d59c56cbc2bdfdef5f2367e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/f6083fb2fec7847ce4bb562bc5eef062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/f6c8b1e21c1b59d6c07e78a9e3dacf5a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/fdb1db8544f131678055ea4299278863.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +113,7 @@
         <option value="Flask Main" />
         <option value="Python Unit Test" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -79,15 +145,15 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/auth" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/python" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/python/test" />
-      <recent name="$PROJECT_DIR$/python/model" />
     </key>
   </component>
   <component name="RunManager" selected="Flask server.Flask (app.py)">
@@ -160,6 +226,7 @@
       <updated>1622919490685</updated>
       <workItem from="1622919491846" duration="6187000" />
       <workItem from="1622997602265" duration="14543000" />
+      <workItem from="1623523671557" duration="9274000" />
     </task>
     <servers />
   </component>
@@ -179,55 +246,68 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="731" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623005999288">
-      <screen x="0" y="23" width="1920" height="986" />
+    <state x="728" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623522982408">
+      <screen x="0" y="23" width="1920" height="988" />
+    </state>
+    <state x="728" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.988@0.23.1920.988" timestamp="1623522982408" />
+    <state x="731" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623521845269">
+      <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="731" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.986@0.23.1920.986" timestamp="1623005999288" />
-    <state x="18" y="340" key="#xdebugger.evaluate" timestamp="1623014373885">
+    <state x="731" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.988@0.23.1920.988" timestamp="1623521845269" />
+    <state x="18" y="340" key="#xdebugger.evaluate" timestamp="1623605463968">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="18" y="339" key="#xdebugger.evaluate/0.23.1920.986@0.23.1920.986" timestamp="1623011985000" />
-    <state x="18" y="340" key="#xdebugger.evaluate/0.23.1920.988@0.23.1920.988" timestamp="1623014373885" />
-    <state width="1638" height="310" key="GridCell.Tab.0.bottom" timestamp="1623015106058">
+    <state x="18" y="340" key="#xdebugger.evaluate/0.23.1920.988@0.23.1920.988" timestamp="1623605463968" />
+    <state width="1638" height="310" key="GridCell.Tab.0.bottom" timestamp="1623605356504">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.0.bottom/0.23.1920.986@0.23.1920.986" timestamp="1623012082269" />
-    <state width="1638" height="310" key="GridCell.Tab.0.bottom/0.23.1920.988@0.23.1920.988" timestamp="1623015106058" />
-    <state width="1638" height="310" key="GridCell.Tab.0.center" timestamp="1623015106057">
+    <state width="1638" height="310" key="GridCell.Tab.0.bottom/0.23.1920.988@0.23.1920.988" timestamp="1623605356504" />
+    <state width="1638" height="310" key="GridCell.Tab.0.center" timestamp="1623605356503">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.0.center/0.23.1920.986@0.23.1920.986" timestamp="1623012082268" />
-    <state width="1638" height="310" key="GridCell.Tab.0.center/0.23.1920.988@0.23.1920.988" timestamp="1623015106057" />
-    <state width="1638" height="310" key="GridCell.Tab.0.left" timestamp="1623015106056">
+    <state width="1638" height="310" key="GridCell.Tab.0.center/0.23.1920.988@0.23.1920.988" timestamp="1623605356503" />
+    <state width="1638" height="310" key="GridCell.Tab.0.left" timestamp="1623605356503">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.0.left/0.23.1920.986@0.23.1920.986" timestamp="1623012082267" />
-    <state width="1638" height="310" key="GridCell.Tab.0.left/0.23.1920.988@0.23.1920.988" timestamp="1623015106056" />
-    <state width="1638" height="310" key="GridCell.Tab.0.right" timestamp="1623015106057">
+    <state width="1638" height="310" key="GridCell.Tab.0.left/0.23.1920.988@0.23.1920.988" timestamp="1623605356503" />
+    <state width="1638" height="310" key="GridCell.Tab.0.right" timestamp="1623605356504">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.0.right/0.23.1920.986@0.23.1920.986" timestamp="1623012082269" />
-    <state width="1638" height="310" key="GridCell.Tab.0.right/0.23.1920.988@0.23.1920.988" timestamp="1623015106057" />
-    <state width="1638" height="310" key="GridCell.Tab.1.bottom" timestamp="1623015106059">
+    <state width="1638" height="310" key="GridCell.Tab.0.right/0.23.1920.988@0.23.1920.988" timestamp="1623605356504" />
+    <state width="1638" height="310" key="GridCell.Tab.1.bottom" timestamp="1623605346893">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.1.bottom/0.23.1920.986@0.23.1920.986" timestamp="1623012077394" />
-    <state width="1638" height="310" key="GridCell.Tab.1.bottom/0.23.1920.988@0.23.1920.988" timestamp="1623015106059" />
-    <state width="1638" height="310" key="GridCell.Tab.1.center" timestamp="1623015106059">
+    <state width="1638" height="310" key="GridCell.Tab.1.bottom/0.23.1920.988@0.23.1920.988" timestamp="1623605346893" />
+    <state width="1638" height="310" key="GridCell.Tab.1.center" timestamp="1623605346892">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.1.center/0.23.1920.986@0.23.1920.986" timestamp="1623012077393" />
-    <state width="1638" height="310" key="GridCell.Tab.1.center/0.23.1920.988@0.23.1920.988" timestamp="1623015106059" />
-    <state width="1638" height="310" key="GridCell.Tab.1.left" timestamp="1623015106058">
+    <state width="1638" height="310" key="GridCell.Tab.1.center/0.23.1920.988@0.23.1920.988" timestamp="1623605346892" />
+    <state width="1638" height="310" key="GridCell.Tab.1.left" timestamp="1623605346892">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.1.left/0.23.1920.986@0.23.1920.986" timestamp="1623012077392" />
-    <state width="1638" height="310" key="GridCell.Tab.1.left/0.23.1920.988@0.23.1920.988" timestamp="1623015106058" />
-    <state width="1638" height="310" key="GridCell.Tab.1.right" timestamp="1623015106059">
+    <state width="1638" height="310" key="GridCell.Tab.1.left/0.23.1920.988@0.23.1920.988" timestamp="1623605346892" />
+    <state width="1638" height="310" key="GridCell.Tab.1.right" timestamp="1623605346893">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1638" height="310" key="GridCell.Tab.1.right/0.23.1920.986@0.23.1920.986" timestamp="1623012077393" />
-    <state width="1638" height="310" key="GridCell.Tab.1.right/0.23.1920.988@0.23.1920.988" timestamp="1623015106059" />
+    <state width="1638" height="310" key="GridCell.Tab.1.right/0.23.1920.988@0.23.1920.988" timestamp="1623605346893" />
+    <state x="502" y="153" key="SettingsEditor" timestamp="1623520732223">
+      <screen x="0" y="23" width="1920" height="988" />
+    </state>
+    <state x="502" y="153" key="SettingsEditor/0.23.1920.988@0.23.1920.988" timestamp="1623520732223" />
+    <state x="658" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1623601817508">
+      <screen x="0" y="23" width="1920" height="988" />
+    </state>
+    <state x="658" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1920.988@0.23.1920.988" timestamp="1623601817508" />
     <state x="723" y="403" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1623002788596">
       <screen x="0" y="23" width="1920" height="986" />
     </state>
@@ -238,29 +318,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/api/auth.py</url>
-          <line>40</line>
+          <line>46</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/api/auth.py</url>
-          <line>39</line>
+          <line>45</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/api/auth.py</url>
-          <line>27</line>
+          <line>29</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/api/auth.py</url>
-          <line>29</line>
+          <line>35</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/porttracker$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1623014974541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/porttracker$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1623605339559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/porttracker$Unittests_for_test_model_TestModelSchema_test_shcema.coverage" NAME="Unittests for test_model.TestModelSchema.test_shcema Coverage Results" MODIFIED="1623011487595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/test" />
   </component>
 </project>
