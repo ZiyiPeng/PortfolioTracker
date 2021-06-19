@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+migrations/
+python/api/__pycache__
+python/model/__pycache__
+.idea
+/__pycache__
