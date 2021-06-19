@@ -21,4 +21,6 @@ guard.init_app(app, User)
 migrate = Migrate(app, db)
 
 from python.api.auth import auth
+from python.api.endpoints import endpoints
 app.register_blueprint(auth)
+app.register_blueprint(endpoints)

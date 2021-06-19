@@ -4,6 +4,7 @@ from sqlalchemy.exc import IntegrityError
 
 from base import app
 from python.model.model import guard, db
+from python.model.portfolio import Portfolio
 from python.model.user import User
 
 auth = Blueprint('auth', __name__, template_folder='frontend/public')
@@ -23,6 +24,8 @@ def register():
     try:
         hashed_pass = guard.hash_password(req['password'])
         user = User(username=req['username'], password_hash=hashed_pass)
+        portfolio = Portfolio(name=f'{user.username} portfolio')
+        user.portfolio = portfolio
         db.session.add(user)
         db.session.commit()
         user = guard.authenticate(user.username, req['password'])

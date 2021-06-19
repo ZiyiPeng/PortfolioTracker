@@ -1,10 +1,13 @@
+from dataclasses import dataclass
+from sqlalchemy_serializer import SerializerMixin
 from python.model.model import db
 
-class User(db.Model):
+@dataclass
+class User(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(256), unique=True)
     password_hash = db.Column(db.String(256))
-    portfolio = db.relationship('Portfolio', uselist=False, backref='user', lazy=True)
+    portfolio = db.relationship('Portfolio', uselist=False, lazy=True)
     roles = db.Column(db.String(20), default='USER')
 
     @property
