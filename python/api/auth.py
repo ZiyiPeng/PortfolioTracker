@@ -9,6 +9,7 @@ from python.model.user import User
 
 auth = Blueprint('auth', __name__, template_folder='frontend/public')
 
+
 @app.route('/api/login', methods=['POST'])
 def login():
     req = flask.request.get_json(force=True)

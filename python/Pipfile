@@ -11,6 +11,9 @@ flask-sqlalchemy = "*"
 flask-praetorian = "*"
 flask-cors = "*"
 yfinance = "*"
+pandas_datareader = "*"
+flask-caching = "*"
+scipy = '*'
 
 [dev-packages]
 

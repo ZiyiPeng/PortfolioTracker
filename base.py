@@ -14,13 +14,16 @@ CORS(app)
 app.config.from_pyfile('config.py')
 
 from python.model.model import db, guard
-
 db.init_app(app)
 guard.init_app(app, User)
 
+from flask_caching import Cache
+cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
+cache.init_app(app)
+
 migrate = Migrate(app, db)
 
-from python.api.auth import auth
-from python.api.endpoints import endpoints
-app.register_blueprint(auth)
-app.register_blueprint(endpoints)
+# from python.api.auth import auth
+# from python.api.endpoints import endpoints
+# app.register_blueprint(auth)
+# app.register_blueprint(endpoints)

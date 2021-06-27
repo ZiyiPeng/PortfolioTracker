@@ -18,4 +18,3 @@ class Stock(db.Model, SerializerMixin):
             db.session.add(stock)
             db.session.commit()
         return stock
-
