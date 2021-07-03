@@ -18,3 +18,8 @@ class Stock(db.Model, SerializerMixin):
             db.session.add(stock)
             db.session.commit()
         return stock
+
+    @classmethod
+    def get_stocks(cls, tickers):
+        stocks = db.session.query(Stock).filter(Stock.ticker.in_(tickers)).all()
+        return stocks

@@ -82,14 +82,11 @@ def optimal_weights():
     req = flask.request.get_json(force=True)
     optimize_rule = req.get('rule', None)
     total_value = req.get('total_value', None)
+    cons_arg = req.get('constraints', [])
     tickers = req.get('tickers', [r.stock_ticker for r in user.portfolio.records])
     analyzer = Analyzer(tickers=tickers)
-    weights, exp_return, vol, comp, total_value = analyzer.optimal_comp(optimize_rule, total_value)
-    return {'weights': weights,
-            'expected_return': exp_return,
-            'volatility': vol,
-            'detail': comp,
-            'total_value': total_value}, 200
+    result = analyzer.optimal_comp(optimize_rule, total_value, cons_arg)
+    return result, 200
 
 
 
