@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Local dev environment setup
+`make local-mysql-start` <br />
+run mysql server in docker at port 3306 <br />
+`make python-install` <br />
+install dependencies used by the flask app, pipenv is required <br />
+`make init-db` <br />
+initialize database schemas and update the schema to the most recent version <br />
+`make local-backend` <br />
+run the flask-app locally on port 5000 <br />
+`make local-frontend` <br />
+run react frontend locally visiable via port 3000 <br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Directory Structure
+-python (Backend code) <br /> 
+-api-doc (api examples which can be imported into Postman, might be replaced by a mock server) <br /> 
+-migration (alembic configuration and schema related files) <br /> 
 
-## Available Scripts
+# Project Summary
+This app helps users find an optimal weight allocation among chosen stocks listed in the US market. It supports <br />
+-Min-var (minimum variance/volatility) portfolio <br />
+-max-return (maximum expected return) portfolio <br />
+-max-sharpe (max return/volatility ratio) portfolio <br /><br />
 
-In the project directory, you can run:
+Users can define multiple types of constraints: <br />
+-sector constraint (ex: percentage weight of a specific sector is smaller/larger/equal to x%) <br />
+-industry constraint <br />
+-individual equity constraint (percentage weight of a specific stock is smaller/larger/equal to x%) <br />
+Long only / No shorting <br /><br />
 
-### `npm start`
+Work in progress: <br />
+-Integrate interactive broker API & support portfolio sync <br />
+-support auto-rebalancing rules <br />
+-better error handling & caching strategy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
