@@ -1,0 +1,895 @@
+{
+	"info": {
+		"_postman_id": "c850acf1-f196-4153-9830-c4a0b5c4662e",
+		"name": "Port-Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test-user\", \n    \"password\": \"pass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-username exist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test-user\", \n    \"password\": \"pass\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"pm.collectionVariables.set(\"token\", res.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test-user\", \n    \"password\": \"pass\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login - user does not exist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test-user-fake\", \n    \"password\": \"pass\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_stock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/stock?ticker=AAPL",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stock"
+					],
+					"query": [
+						{
+							"key": "ticker",
+							"value": "AAPL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n        {\"ticker\": \"AAPL\", \"amount\": 2}, \n        {\"ticker\": \"MSFT\", \"amount\": 1}, \n        {\"ticker\": \"GME\", \"amount\": 1}, \n        {\"ticker\": \"TSLA\", \"amount\": 1}\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/records",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_portfolio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"const record_ids = res['data']['portfolio']['records'].map((r) => r['id'])",
+							"pm.collectionVariables.set(\"record_ids\", record_ids);",
+							"pm.collectionVariables.set(\"rid_1\", record_ids[0]);",
+							"pm.collectionVariables.set(\"rid_2\", record_ids[1]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/portfolio",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"portfolio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_portfolio current_value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"const record_ids = res['data']['portfolio']['records'].map((r) => r['id'])",
+							"pm.collectionVariables.set(\"record_ids\", record_ids);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/portfolio/current_value",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"portfolio",
+						"current_value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-optimal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"optimal\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-max_return",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"max_return\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-min_var",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-stock-cons-lower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"lower\": 0.15}, \n        \"field\": \"stock\", \n        \"name\": \"AAPL\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-stock-cons-upper",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"upper\": 0.15}, \n        \"field\": \"stock\", \n        \"name\": \"AAPL\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-stock-cons-between",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [\n    {\n        \"bounds\": {\"lower\": 0.15, \"upper\": 0.2}, \n        \"field\": \"stock\", \n        \"name\": \"AAPL\"\n    }, \n    {\n        \"bounds\": {\"lower\": 0.15, \"upper\": 0.2}, \n        \"field\": \"stock\", \n        \"name\": \"TSLA\"\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-industry-cons-lower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"lower\": 0.15}, \n        \"field\": \"industry\", \n        \"name\": \"Software—Infrastructure\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-industry-cons-upper",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"upper\": 0.15}, \n        \"field\": \"industry\", \n        \"name\": \"Software—Infrastructure\"\n    }, {\n        \"bounds\": {\"upper\": 0.15}, \n        \"field\": \"industry\", \n        \"name\": \"Specialty Retail\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-sector-cons-between",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"min_var\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"lower\": 0.5, \"upper\": 0.8}, \n        \"field\": \"sector\", \n        \"name\": \"Consumer Cyclical\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-sector-cons-upper",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"optimal\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"upper\": 0.15}, \n        \"field\": \"sector\", \n        \"name\": \"Technology\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optimize-sector-cons-lower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rule\": \"optimal\", \n    \"total_value\": 10000, \n    \"tickers\": [\"AAPL\", \"MSFT\", \"GME\", \"TSLA\"], \n    \"constraints\": [{\n        \"bounds\": {\"lower\": 0.9}, \n        \"field\": \"sector\", \n        \"name\": \"Technology\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/analyze",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_records",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n        {\n            \"record_id\": {{rid_1}},\n            \"amount\": 1\n        },\n        {\n            \"record_id\": {{rid_2}},\n            \"amount\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/records",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"record_ids\": [{{record_ids}}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/delete_records",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"delete_records"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "record_ids",
+			"value": ""
+		},
+		{
+			"key": "update_paylaod",
+			"value": ""
+		},
+		{
+			"key": "rid_1",
+			"value": ""
+		},
+		{
+			"key": "rid_2",
+			"value": ""
+		}
+	]
+}

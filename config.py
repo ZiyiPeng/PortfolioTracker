@@ -1,8 +1,8 @@
-USERNAME = 'zpeng'
+USERNAME = 'root'
 PASSWORD = 'Passw0rd'
-ADDRESS = '127.0.0.1'
-PORT = '6443'
-SQLALCHEMY_DATABASE_URI = f'mysql://{USERNAME}:{PASSWORD}@{ADDRESS}:{PORT}/port-tracker'
+ADDRESS = 'localhost'
+PORT = '3306'
+SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{USERNAME}:{PASSWORD}@{ADDRESS}:{PORT}/port-tracker'
 SECRET_KEY = "top secret"
 JWT_ACCESS_LIFESPAN = {"hours": 24}
 JWT_REFRESH_LIFESPAN = {"days": 30}

@@ -28,3 +28,5 @@ python/model/__pycache__
 .idea
 /__pycache__
 python/analyze/__pycache__/
+
+Pipfile.lock
